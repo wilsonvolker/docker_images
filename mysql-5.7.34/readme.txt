@@ -1,5 +1,6 @@
 Run with following commands:
 
+mkdir -p .data/db
 docker-compose up
 
 Connect the db via MySQL workbench:

@@ -12,5 +12,7 @@ services:
       # MYSQL_ROOT_PASSWORD: example
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_TCP_PORT: 48898
+    volumes:
+      - "./.data/db:/var/lib/mysql"
     ports:
       - 48898:48898
