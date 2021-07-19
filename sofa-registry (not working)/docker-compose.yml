@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  sofa-registry:
+    platform: linux/x86_64
+#    environment:
+#      - DB_HOST=host.docker.internal
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        HOST_IP: host.docker.internal
+    volumes:
+      - "./.build:/tmp/build"
+    ports:
+      - 9615:9615 # container port:expose port
+      - 9622:9622
+      - 9603:9603
